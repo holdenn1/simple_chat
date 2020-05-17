@@ -10,12 +10,16 @@ app.get('/rooms', (req, res) => {
   res.json(rooms)
 })
 
+app.post('/rooms', (req, res) => {
+  console.log('Hello')
+})
+
 io.on('connection', (socket) => { // когда пользователь подключился к сокетам то тогда сказать user connecting
   console.log('user connecting', socket.id)
 })
 
 server.listen(5000, (err) => {
-  if (err){
+  if (err) {
     throw Error(err)
   }
   console.log('Server running...')
