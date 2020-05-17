@@ -1,0 +1,13 @@
+export default (state, action) => {
+  switch (action.type) {
+    case 'IS_AUTH':
+      return {
+        ...state,
+        isAuth: action.payload
+      }
+      break;
+    default:
+      return state
+  }
+
+}
